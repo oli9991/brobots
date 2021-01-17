@@ -1,0 +1,25 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.image {
+  width: 100%;
+  img {
+    width: 60%;
+  }
+
+  @include layout(row, center, flex-end);
+}
+
+.text {
+  font-family: $primary_font !important;
+  @include layout(column, flex-start, flex-start);
+  padding: 10% 1vw;
+
+  min-height: calc(100vh - #{$footer_h} - #{$header_h});
+  position: fixed;
+  width: 50%;
+
+  p {
+    text-align: left;
+  }
+}

@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Zekton';
+  src: local('Zekton'), url(./fonts/ZektonRg-Regular.ttf) format('truetype');
+}

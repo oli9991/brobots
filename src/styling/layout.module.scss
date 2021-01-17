@@ -1,0 +1,73 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.content {
+  background-color: $grena;
+  color: $alb;
+
+  font-family: $primary_font;
+
+  min-height: calc(100vh - #{$header_h} - #{$footer_h});
+  width: 100%;
+}
+
+.header {
+  height: $header_h;
+  width: 100%;
+
+  background-color: $grena;
+  @include layout(row, center, flex-start);
+
+  img {
+    height: 80%;
+    padding: 1.5vh 0 0 1.5vw;
+  }
+
+  .links {
+    width: 90%;
+    @include layout(row, center, flex-end);
+    padding-top: 2vh;
+  }
+
+  a {
+    color: $alb;
+    font-family: $secondary_font;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.2em;
+    border-bottom: 2px solid transparent;
+    transition: all 1s linear;
+
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: -2vh;
+      left: 30%;
+    }
+  }
+
+  .normal {
+    &:hover {
+      border-bottom: 2px solid $portocaliu;
+    }
+
+    &:active {
+      color: $portocaliu;
+    }
+  }
+  .active {
+    border-bottom: 2px solid $portocaliu;
+    color: $portocaliu;
+  }
+}
+
+.footer {
+  height: $footer_h;
+  @include layout(row, center, flex-end);
+
+  img {
+    height: 90%;
+    padding-right: 2vw;
+  }
+}
