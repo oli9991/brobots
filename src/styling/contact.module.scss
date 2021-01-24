@@ -1,0 +1,42 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.container {
+  font-family: $secondary_font;
+  width: 30%;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  border-radius: 5px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+  @include layout(column, center, center);
+  padding: 5px;
+}
+
+.wrapper {
+  width: 100%;
+  height: calc(100vh - #{$header_h} - #{$footer_h});
+
+  @include layout(row, center, center);
+}
+
+.group {
+  width: 100%;
+  a,
+  p {
+    cursor: pointer;
+    @include layout(row, center, flex-start);
+    margin: 0 0 5% 10%;
+    color: #fffdfe;
+    font-size: 1.5em;
+    svg {
+      font-size: 1.75em;
+      margin-right: 15px;
+      color: #da7130;
+    }
+
+    text-decoration: none;
+  }
+}

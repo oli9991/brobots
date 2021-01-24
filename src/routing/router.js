@@ -4,9 +4,7 @@ import Home from '../pages/home';
 import Team from '../pages/team';
 import Events from '../pages/events';
 import Results from '../pages/results';
-
-/* TODO --- de modificat ruta pentru pagina de contact */
-import Contact from '../pages/results';
+import Contact from '../pages/contact';
 
 const Router = () => {
   return (
