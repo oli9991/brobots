@@ -50,11 +50,7 @@ const Contact = () => {
             </p>
           </div>
           <div className={style.group}>
-            <a
-              href='mailto://s_ianc@yahoo.com'
-              target='_blank'
-              rel='noreferrer'
-            >
+            <a href='mailto:s_ianc@yahoo.com' target='_blank' rel='noreferrer'>
               <MdMail /> s_ianc@yahoo.com
             </a>
           </div>

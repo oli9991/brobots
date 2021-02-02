@@ -18,3 +18,12 @@ $desktop: 1200px;
 // fonts
 $primary_font: 'Noto Sans JP';
 $secondary_font: 'Zekton';
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

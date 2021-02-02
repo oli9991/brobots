@@ -4,3 +4,65 @@
   align-items: $align;
   justify-content: $justify;
 }
+
+@mixin prefixed($property, $value) {
+  #{$property}: #{$value};
+}
+
+@mixin hardwareAccel() {
+  // Improve performance on mobile/tablet devices
+  // Perspective reduces blurryness of text in Chrome
+  @include prefixed(transform, perspective(1px) translateZ(0));
+}
+
+@mixin improveAntiAlias() {
+  // Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+@mixin forceBlockLevel() {
+  // Transforms need to be block-level to work
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin hacks() {
+  @include forceBlockLevel();
+  @include hardwareAccel();
+  @include improveAntiAlias();
+}
+
+$mediumDuration: 0.3s !default;
+
+@mixin sweep-to-bottom {
+  @include hacks();
+  position: relative;
+  @include prefixed(transition-property, color);
+  @include prefixed(transition-duration, $mediumDuration);
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background: rgba(255, 255, 255, 1);
+    @include prefixed(transform, scaleY(0));
+    @include prefixed(transform-origin, 50% 0);
+    @include prefixed(transition-property, transform);
+    @include prefixed(transition-duration, $mediumDuration);
+    @include prefixed(transition-timing-function, ease-out);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+
+    &:before {
+      @include prefixed(transform, scaleY(1));
+    }
+  }
+}

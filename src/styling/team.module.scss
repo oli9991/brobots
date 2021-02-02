@@ -1,0 +1,146 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.container {
+  @include layout(row, center, flex-start);
+  flex-flow: row wrap;
+  padding: 1%;
+}
+
+.card {
+  width: 30%;
+
+  @media (max-width: $desktop) {
+    width: 38%;
+  }
+
+  @media (max-width: $small_laptop) {
+    width: 46%;
+  }
+
+  @media (max-width: $tablet) {
+    width: 90%;
+  }
+
+  @media (max-width: $phone) {
+    width: 90%;
+  }
+
+  @include layout(row, center, flex-start);
+
+  margin: 1.5%;
+  padding: 0 1.5%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: $alb;
+  border-radius: 4px;
+
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+  .info {
+    @include layout(column, flex-start, flex-start);
+    height: 100%;
+    width: calc(100% - 150px - 40px);
+    margin: 10px;
+
+    p {
+      text-align: left;
+      font-size: 0.75em;
+    }
+
+    h4 {
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: $phone) {
+      width: calc(100% - 100px - 2%);
+    }
+  }
+}
+
+.background {
+  height: 200px;
+  width: 150px;
+  margin: 0 3%;
+  @include sweep-to-bottom();
+  border-radius: 4px;
+  position: relative;
+
+  @media (max-width: $phone) {
+    height: 150px;
+    width: 100px;
+  }
+
+  img {
+    height: 200px;
+    width: 150px;
+
+    object-fit: cover;
+    border-radius: 4px;
+
+    z-index: 1;
+
+    @media (max-width: $phone) {
+      height: 150px;
+      width: 100px;
+    }
+  }
+
+  .media {
+    top: 0;
+    position: absolute;
+    width: 150px;
+    height: 0;
+    z-index: 2;
+    border-radius: 4px;
+
+    text-align: left;
+
+    transition-property: height;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    background-color: rgba(250, 141, 69, 0.75);
+
+    @include layout(column, center, center);
+  }
+
+  .contact {
+    top: 0;
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    z-index: 4;
+    border-radius: 4px;
+    transition: all 0.5s ease 0s;
+    visibility: hidden;
+    opacity: 0;
+
+    @include layout(column, center, center);
+
+    .links {
+      @include layout(row, center, center);
+    }
+
+    a {
+      color: $alb;
+      text-decoration: none;
+      font-size: 0.8em;
+      margin: 0 4%;
+
+      svg {
+        font-size: 1.5em;
+      }
+      @include layout(row, center, flex-start);
+    }
+  }
+
+  &:hover {
+    .media {
+      height: 200px;
+    }
+    .contact {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

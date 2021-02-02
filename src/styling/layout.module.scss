@@ -9,6 +9,8 @@
 
   min-height: calc(100vh - #{$header_h} - #{$footer_h});
   width: 100%;
+
+  overflow: auto;
 }
 
 .header {
@@ -21,6 +23,11 @@
   img {
     height: 80%;
     padding: 1.5vh 0 0 1.5vw;
+
+    @media (max-width: $phone) {
+      height: 50%;
+      padding: 1.5vh 0 0 3.5vw;
+    }
   }
 
   .links {
@@ -45,6 +52,11 @@
       top: -2vh;
       left: 30%;
     }
+
+    @media (max-width: $phone) {
+      font-size: 0.7em;
+      margin: 0 5px;
+    }
   }
 
   .normal {
@@ -68,6 +80,11 @@
 
   img {
     height: 90%;
+
     padding-right: 2vw;
+
+    @media (max-width: $phone) {
+      height: 10vw;
+    }
   }
 }

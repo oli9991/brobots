@@ -10,7 +10,7 @@ const Home = () => {
         <ReactTypingEffect
           displayTextRenderer={(text, i) => {
             return (
-              <h1>
+              <h1 key={i}>
                 {text.split('').map((char, i) => {
                   const key = `${i}`;
                   return (
