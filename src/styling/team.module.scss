@@ -29,7 +29,7 @@
   @include layout(row, center, flex-start);
 
   margin: 1.5%;
-  padding: 0 1.5%;
+  padding: 1% 1.5% 0 1.5%;
   background-color: rgba(255, 255, 255, 0.1);
   color: $alb;
   border-radius: 4px;
@@ -39,17 +39,19 @@
 
   .info {
     @include layout(column, flex-start, flex-start);
-    height: 100%;
+    height: 260px;
     width: calc(100% - 150px - 40px);
     margin: 10px;
+    padding-bottom: 20px;
 
     p {
       text-align: left;
-      font-size: 0.75em;
+      font-size: 0.8em;
+      overflow: auto;
     }
 
     h4 {
-      margin-bottom: 5px;
+      margin: 5px 0 5px 0;
     }
 
     @media (max-width: $phone) {
@@ -59,9 +61,10 @@
 }
 
 .background {
-  height: 200px;
+  height: 260px;
   width: 150px;
   margin: 0 3%;
+
   @include sweep-to-bottom();
   border-radius: 4px;
   position: relative;
@@ -72,7 +75,7 @@
   }
 
   img {
-    height: 200px;
+    height: 240px;
     width: 150px;
 
     object-fit: cover;
@@ -136,7 +139,7 @@
 
   &:hover {
     .media {
-      height: 200px;
+      height: 240px;
     }
     .contact {
       visibility: visible;

@@ -11,7 +11,7 @@ export const team = [
     phone: '0787 546 995',
     email: 'laurasimion89@gmail.com',
     description:
-      'Sunt o fata super super. Imi place mult la scoala. Imi place sa invat foarte tare si sunt bomba la matematica. Ajut pe toata lumea. Imi place pizza. Sunt o fata super super. Imi place mult la scoala. Imi place sa invat foarte tare si sunt bomba la matematica. Ajut pe toata lumea. Imi place pizza.Sunt o fata super super. Imi place mult la scoala. Imi place sa invat foarte tare si sunt bomba la matematica. Ajut pe toata lumea. Imi place pizza. '
+      'Sunt o fata super super. Imi place mult la scoala. Imi place sa invat foarte tare si sunt bomba la matematica. Ajut pe toata lumea. Imi place pizza. Sunt o fata super super. Imi place mult la scoala. Imi place sa invat foarte tare si sunt bomba la matematica. Ajut pe toata lumea. Imi place pizza.Sunt o fata super super. Imi place mult la scoala. Imi place sa invat foarte tare si sunt bomba la matematica. Ajut pe toata lumea. Imi place pizza.Sunt o fata super super. Imi place mult la scoala. Imi place sa invat foarte tare si sunt bomba la matematica. Ajut pe toata lumea. '
   },
   {
     name: 'Grigorie Smarandache',
