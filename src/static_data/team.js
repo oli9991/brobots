@@ -1,5 +1,5 @@
 import grig from '../assets/grig.png';
-import andy from '../assets/andy.png';
+import andy from '../assets/Andy.jpg';
 import laura from '../assets/laura.png';
 import chebarus from '../assets/Chebarus.jpg';
 import sima from '../assets/sima.jpg';

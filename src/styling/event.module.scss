@@ -116,6 +116,7 @@
   flex-flow: row wrap;
   padding: 1% 0 2% 1.5%;
   font-family: $secondary_font;
+  width: 90%;
 
   h1 {
     text-align: left;
@@ -137,5 +138,12 @@
       font-size: 1.2em;
       width: 80%;
     }
+  }
+}
+
+.slideshow {
+  background-color: transparent;
+  img {
+    margin: auto;
   }
 }
