@@ -13,7 +13,7 @@
 }
 
 .text {
-  font-family: $primary_font !important;
+  // font-family: $primary_font !important;
   @include layout(column, flex-start, flex-start);
   padding: 10% 1vw;
 

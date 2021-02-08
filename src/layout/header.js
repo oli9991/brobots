@@ -38,11 +38,13 @@ const Header = () => {
         </Link>
         <Link
           className={
-            location.pathname === '/events' ? styles.active : styles.normal
+            location.pathname.includes('/events')
+              ? styles.active
+              : styles.normal
           }
           to='/events'
         >
-          {location.pathname === '/events' && <FaRobot />}
+          {location.pathname.includes('/events') && <FaRobot />}
           Events
         </Link>
         <Link

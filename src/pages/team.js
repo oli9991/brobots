@@ -18,7 +18,7 @@ const Team = () => {
           data.map((human, id) => (
             <div key={id} className={styles.card}>
               <div className={styles.background}>
-                <img src={human.img} alt={`${human.name}`} />
+                {human.img && <img src={human.img} alt={`${human.name}`} />}
                 <div className={styles.media} />
                 <div className={styles.contact}>
                   <div className={styles.links}>

@@ -5,6 +5,7 @@ import Team from '../pages/team';
 import Events from '../pages/events';
 import Results from '../pages/results';
 import Contact from '../pages/contact';
+import Event from '../pages/event';
 
 const Router = () => {
   return (
@@ -12,7 +13,8 @@ const Router = () => {
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/team' component={Team} />
-        <Route path='/events' component={Events} />
+        <Route exact path='/events' component={Events} />
+        <Route path='/events/:title' component={Event} />
         <Route path='/alumni' component={Team} />
         <Route path='/results' component={Results} />
         <Route path='/contact' component={Contact} />
