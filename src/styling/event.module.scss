@@ -1,5 +1,6 @@
 @import './variables.scss';
 @import './mixins.scss';
+// @import '~bootstrap/scss/bootstrap';
 
 .container {
   @include layout(row, center, flex-start);
@@ -141,9 +142,32 @@
   }
 }
 
-.slideshow {
-  background-color: transparent;
+.primaryArea {
+  display: flex;
+  align-items: space-evenly;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.carousel {
+  margin-top: 3vh;
+  position: relative;
+
   img {
-    margin: auto;
+    height: 30vw;
+    object-fit: cover;
+    transition: all 0.2s linear;
+
+    // &:hover {
+    //   object-fit: cover;
+    //   top: 0;
+    //   height: 40vw;
+    //   width: 100%;
+    //   z-index: 10;
+    // }
   }
+}
+
+.description {
+  margin-top: 3vh;
 }
