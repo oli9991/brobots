@@ -11,6 +11,8 @@ const Team = () => {
   const location = useLocation();
   const { pathname } = location;
   const data = pathname === '/alumni' ? alumni : team;
+
+  document.title = `BroBots - ${pathname === '/alumni' ? 'Alumni' : 'Team'}`;
   return (
     <Layout>
       <div className={styles.container}>

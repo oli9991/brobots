@@ -5,6 +5,7 @@ import { events } from '../static_data/demo';
 import { Link } from 'react-router-dom';
 
 const Demos = () => {
+  document.title = 'BroBots - Demos';
   return (
     <Layout>
       <div className={styles.container}>

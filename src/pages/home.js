@@ -4,6 +4,7 @@ import styles from '../styling/home.module.scss';
 import ReactTypingEffect from 'react-typing-effect';
 
 const Home = () => {
+  document.title = 'BroBots - Home';
   return (
     <Layout>
       <div className={styles.text}>

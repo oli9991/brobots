@@ -5,6 +5,7 @@ import { events } from '../static_data/media';
 import { Link } from 'react-router-dom';
 
 const Media = () => {
+  document.title = 'BroBots - Media';
   return (
     <Layout>
       <div className={styles.container}>

@@ -12,6 +12,7 @@ const Contact = () => {
     toast('Saved to clipboard');
   };
 
+  document.title = 'BroBots - Contact';
   return (
     <Layout>
       <ToastContainer draggable hideProgressBar position='top-center' />
