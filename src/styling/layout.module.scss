@@ -95,32 +95,34 @@
   position: relative;
 
   .menu {
-    @include layout(column, center, flex-end);
-    position: absolute;
-    top: 40px;
-    z-index: 20;
-
-    visibility: hidden;
-
-    background-color: rgba(255, 255, 255, 1);
-
-    border-radius: 4px;
-
-    a {
-      padding: 5px;
-      color: $gri_inchis;
-
-      &:hover {
-        color: $gri_inchis;
-      }
-    }
+    display: none;
 
     // transition: visibility 0.5s linear;
   }
 
   &:hover {
+    display: inline-block;
+    position: relative;
+
     .menu {
-      visibility: visible;
+      margin-top: 20px;
+      @include layout(column, center, flex-end);
+      position: absolute;
+
+      z-index: 20;
+
+      background-color: rgba(255, 255, 255, 1);
+
+      border-radius: 4px;
+
+      a {
+        padding: 5px;
+        color: $gri_inchis;
+
+        &:hover {
+          color: $gri_inchis;
+        }
+      }
     }
   }
 }
