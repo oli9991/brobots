@@ -4,7 +4,6 @@
 .container {
   font-family: $secondary_font;
   min-width: 30%;
-  height: 60%;
   background-color: rgba(255, 255, 255, 0.1);
 
   border-radius: 5px;
@@ -18,6 +17,7 @@
 .wrapper {
   width: 100%;
   height: calc(100vh - #{$header_h} - #{$footer_h});
+  padding: 5px;
 
   @include layout(row, center, center);
 }
@@ -28,14 +28,14 @@
   p {
     cursor: pointer;
     @include layout(row, center, flex-start);
-    margin: 0 0 5% 10%;
-    color: #fffdfe;
+    margin: 5% 0 5% 10%;
+    color: #fffdfe !important;
     font-size: 1.5em;
     svg {
       font-size: 1.75em;
       margin-right: 15px;
       color: #da7130;
     }
-    text-decoration: none;
+    text-decoration: none !important;
   }
 }

@@ -108,6 +108,7 @@
       margin-top: 20px;
       @include layout(column, center, flex-end);
       position: absolute;
+      top: 5px;
 
       z-index: 20;
 

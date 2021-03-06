@@ -9,6 +9,8 @@ const Home = () => {
     <Layout>
       <div className={styles.text}>
         <ReactTypingEffect
+          style={{ marginBottom: '1.5vh' }}
+          cursor={' '}
           displayTextRenderer={(text, i) => {
             return (
               <h1 key={i}>
