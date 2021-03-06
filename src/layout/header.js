@@ -36,17 +36,29 @@ const Header = () => {
           {location.pathname === '/alumni' && <FaRobot />}
           Alumni
         </Link>
-        <Link
-          className={
-            location.pathname.includes('/events')
-              ? styles.active
-              : styles.normal
-          }
-          to='/events'
-        >
-          {location.pathname.includes('/events') && <FaRobot />}
-          Events
-        </Link>
+        <div className={styles.events}>
+          <Link
+            className={
+              location.pathname.includes('/events')
+                ? styles.active
+                : styles.normal
+            }
+          >
+            {location.pathname.includes('/events') && <FaRobot />}
+            Events
+          </Link>
+          <div className={styles.menu}>
+            <Link className={styles.normal} to='/events/media'>
+              Media
+            </Link>
+            <Link className={styles.normal} to='/events/demos'>
+              Demo
+            </Link>
+            <Link className={styles.normal} to='/events/'>
+              Others
+            </Link>
+          </div>
+        </div>
         <Link
           className={
             location.pathname === '/results' ? styles.active : styles.normal

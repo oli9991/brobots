@@ -39,11 +39,11 @@
   a {
     color: $alb;
     font-family: $secondary_font;
-    text-decoration: none;
+    text-decoration: none !important;
     margin: 0 10px;
     font-size: 1.2em;
     border-bottom: 2px solid transparent;
-    transition: all 1s linear;
+    transition: all 0.7s linear;
 
     position: relative;
 
@@ -62,6 +62,8 @@
   .normal {
     &:hover {
       border-bottom: 2px solid $portocaliu;
+      color: $alb;
+      text-decoration: none !important;
     }
 
     &:active {
@@ -85,6 +87,40 @@
 
     @media (max-width: $phone) {
       height: 10vw;
+    }
+  }
+}
+
+.events {
+  position: relative;
+
+  .menu {
+    @include layout(column, center, flex-end);
+    position: absolute;
+    top: 40px;
+    z-index: 20;
+
+    visibility: hidden;
+
+    background-color: rgba(255, 255, 255, 1);
+
+    border-radius: 4px;
+
+    a {
+      padding: 5px;
+      color: $gri_inchis;
+
+      &:hover {
+        color: $gri_inchis;
+      }
+    }
+
+    // transition: visibility 0.5s linear;
+  }
+
+  &:hover {
+    .menu {
+      visibility: visible;
     }
   }
 }

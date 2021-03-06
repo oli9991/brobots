@@ -1,13 +1,17 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Layout from '../layout/layout';
-import { events } from '../static_data/events';
+import { events as other } from '../static_data/events';
+import { events as media } from '../static_data/media';
+import { events as demo } from '../static_data/demo';
+
 import styles from '../styling/event.module.scss';
 import Carousel from 'react-bootstrap/Carousel';
 
 const Event = () => {
   const location = useLocation();
-  console.log(location.pathname.split('/')[2]);
+  const events = [...other, ...media, ...demo];
+
   const event = events.find(
     event => event.key === location.pathname.split('/')[2]
   );
@@ -32,9 +36,6 @@ const Event = () => {
                     />
                     <Carousel.Caption>
                       <h3>{event.title}</h3>
-                      {/* <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
-                  </p> */}
                     </Carousel.Caption>
                   </Carousel.Item>
                 ))}

@@ -1,10 +1,10 @@
 import React from 'react';
 import Layout from '../layout/layout';
 import styles from '../styling/event.module.scss';
-import { events } from '../static_data/events';
+import { events } from '../static_data/media';
 import { Link } from 'react-router-dom';
 
-const Events = () => {
+const Media = () => {
   return (
     <Layout>
       <div className={styles.container}>
@@ -33,4 +33,4 @@ const Events = () => {
   );
 };
 
-export default Events;
+export default Media;
