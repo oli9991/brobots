@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Layout from '../layout/layout';
 import styles from '../styling/results_styles.module.scss';
 import { results } from '../static_data/results';
@@ -13,9 +12,7 @@ const Results = () => {
         {results.map((event, id) => (
           <div key={id} className={styles.card}>
             <div className={styles.info}>
-              <Link to={`/events/${event.key}`}>
-                <h4>{event.title}</h4>
-              </Link>
+              <h4>{event.title}</h4>
 
               <p className={styles.location}>{event.location}</p>
               <p>{event.description}</p>
