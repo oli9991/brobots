@@ -34,6 +34,10 @@
     width: 90%;
     @include layout(row, center, flex-end);
     padding-top: 2vh;
+
+    @media screen and (max-width: $tablet) {
+      margin-right: 3%;
+    }
   }
 
   a {
@@ -53,7 +57,12 @@
       left: 30%;
     }
 
-    @media (max-width: $phone) {
+    @media screen and (max-width: $small_screen) {
+      font-size: 0.5em;
+      margin: 0 5px;
+    }
+
+    @media screen and (max-width: $phone) and (min-width: $small_screen) {
       font-size: 0.7em;
       margin: 0 5px;
     }
@@ -93,6 +102,8 @@
 
 .events {
   position: relative;
+  display: flex;
+  align-items: center;
 
   .menu {
     display: none;
@@ -103,6 +114,8 @@
   &:hover {
     display: inline-block;
     position: relative;
+    display: flex;
+    align-items: center;
 
     .menu {
       margin-top: 20px;

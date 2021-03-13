@@ -9,7 +9,9 @@ const Header = () => {
 
   return (
     <div className={styles.header}>
+      {/* <Link className={styles.normal} to='/'> */}
       <img src={logo} alt='logo' />
+      {/* </Link> */}
       <div className={styles.links}>
         <Link
           className={location.pathname === '/' ? styles.active : styles.normal}

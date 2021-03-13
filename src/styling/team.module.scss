@@ -5,7 +5,11 @@
   @include layout(row, center, flex-start);
   flex-flow: row wrap;
   padding: 1% 0 2% 1.5%;
-  font-family: $secondary_font;
+  font-family: $primary_font;
+
+  @media (max-width: $tablet) {
+    @include layout(row, center, center);
+  }
 }
 
 .card {
@@ -49,15 +53,27 @@
       text-align: left;
       font-size: 0.8em;
       overflow: auto;
+
+      @media (max-width: $tablet) {
+        font-size: 0.75em;
+      }
     }
 
     h4 {
       margin: 5px 0 5px 0;
       text-align: left;
+      font-size: 1.3em;
+
+      @media (max-width: $tablet) {
+        font-size: 0.85em;
+        font-weight: bold;
+      }
     }
 
     @media (max-width: $phone) {
       width: calc(100% - 100px - 2%);
+      height: 150px;
+      padding-bottom: 0;
     }
   }
 }
@@ -107,6 +123,11 @@
     background-image: linear-gradient(19deg, #faaca89a 0%, #ddd6f3af 100%);
 
     @include layout(column, center, center);
+
+    @media (max-width: $phone) {
+      height: 0;
+      width: 100px;
+    }
   }
 
   .contact {
@@ -126,6 +147,12 @@
       @include layout(row, center, center);
     }
 
+    @media (max-width: $phone) {
+      font-size: 0.6rem;
+      height: 150px;
+      width: 100px;
+    }
+
     a {
       color: $alb;
       text-decoration: none;
@@ -142,6 +169,11 @@
   &:hover {
     .media {
       height: 240px;
+
+      @media (max-width: $phone) {
+        height: 150px;
+        width: 100px;
+      }
     }
     .contact {
       visibility: visible;

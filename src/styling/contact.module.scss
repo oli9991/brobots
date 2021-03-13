@@ -3,7 +3,7 @@
 
 .container {
   font-family: $secondary_font;
-  min-width: 30%;
+  min-width: 40%;
   background-color: rgba(255, 255, 255, 0.1);
 
   border-radius: 5px;
@@ -12,6 +12,10 @@
 
   @include layout(column, center, center);
   padding: 5px;
+
+  @media screen and (max-width: $tablet) {
+    min-width: 80%;
+  }
 }
 
 .wrapper {
@@ -28,14 +32,21 @@
   p {
     cursor: pointer;
     @include layout(row, center, flex-start);
-    margin: 5% 0 5% 10%;
+    margin: 3% 0 3% 10%;
     color: #fffdfe !important;
-    font-size: 1.5em;
+    font-size: 1.35em;
     svg {
       font-size: 1.75em;
       margin-right: 15px;
       color: #da7130;
     }
     text-decoration: none !important;
+  }
+
+  @media screen and (max-width: $tablet) {
+    a,
+    p {
+      font-size: 0.85em;
+    }
   }
 }

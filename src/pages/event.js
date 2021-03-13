@@ -34,9 +34,6 @@ const Event = () => {
                       src={image}
                       alt='First slide'
                     />
-                    <Carousel.Caption>
-                      <h3>{event.title}</h3>
-                    </Carousel.Caption>
                   </Carousel.Item>
                 ))}
             </Carousel>

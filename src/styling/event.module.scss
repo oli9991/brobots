@@ -6,7 +6,11 @@
   @include layout(row, center, flex-start);
   flex-flow: row wrap;
   padding: 1% 0 2% 1.5%;
-  font-family: $secondary_font;
+  font-family: $primary_font;
+
+  @media (max-width: $tablet) {
+    @include layout(row, center, center);
+  }
 }
 
 .card {
@@ -53,6 +57,10 @@
       overflow: hidden;
       text-overflow: ellipsis;
       padding: 5px 0;
+
+      @media (max-width: $tablet) {
+        font-size: 0.6em;
+      }
     }
 
     h4,
@@ -62,16 +70,26 @@
       width: 100%;
       text-decoration: none;
       color: $alb;
+
+      @media (max-width: $tablet) {
+        font-size: 0.8em;
+      }
     }
 
     .location {
       font-size: 0.8em;
       margin: 5px 0 5px 0;
       opacity: 0.8;
+
+      @media (max-width: $tablet) {
+        font-size: 0.6em;
+      }
     }
 
     @media (max-width: $phone) {
       width: calc(100% - 100px - 2%);
+      height: 150px;
+      padding-bottom: 0;
     }
   }
 }
@@ -117,18 +135,33 @@
   @include layout(row, center, flex-start);
   flex-flow: row wrap;
   padding: 1% 0 2% 1.5%;
-  font-family: $secondary_font;
+  font-family: $primary_font;
   width: 90%;
+
+  @media (max-width: $tablet) {
+    @include layout(row, center, center);
+    width: 100%;
+    padding: 5%;
+  }
 
   h1 {
     text-align: left;
     width: 100%;
     margin: 1% 0 0.5% 0.5%;
-    font-size: 3.5vw;
+    font-size: 3em;
+    font-family: $secondary_font;
+
+    @media (max-width: $tablet) {
+      font-size: 1.5em;
+    }
   }
   p {
     text-align: left;
     width: 100%;
+
+    @media (max-width: $tablet) {
+      font-size: 0.8em;
+    }
 
     &:nth-child(2) {
       margin: 0 1% 1% 0.5%;
@@ -155,23 +188,23 @@
   position: relative;
 
   img {
-    height: 30vw;
+    height: 40vw;
     object-fit: cover;
     transition: all 0.2s linear;
 
-    // &:hover {
-    //   object-fit: cover;
-    //   top: 0;
-    //   height: 40vw;
-    //   width: 100%;
-    //   z-index: 10;
-    // }
+    @media (max-width: $tablet) {
+      height: 50vw;
+    }
   }
 
   h3 {
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     padding: 15px 1px;
+
+    @media (max-width: $tablet) {
+      font-size: 0.5em;
+    }
   }
 }
 

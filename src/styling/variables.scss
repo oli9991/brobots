@@ -10,13 +10,14 @@ $header_h: 12vh;
 $footer_h: 10vh;
 
 // breakpoints media
+$small_screen: 350px;
 $phone: 600px;
 $tablet: 768px;
 $small_laptop: 992px;
 $desktop: 1200px;
 
 // fonts
-$primary_font: 'Noto Sans JP';
+$primary_font: 'Montserrat';
 $secondary_font: 'Zekton';
 
 @keyframes fadeInAnimation {

@@ -51,8 +51,12 @@ const Contact = () => {
             </p>
           </div>
           <div className={style.group}>
-            <a href='mailto:s_ianc@yahoo.com' target='_blank' rel='noreferrer'>
-              <MdMail /> s_ianc@yahoo.com
+            <a
+              href='mailto:brobots.team@gmail.com'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <MdMail /> brobots.team@gmail.com
             </a>
           </div>
         </div>
